@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diksha | Portfolio</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">Diksha</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="home">
+    <div class="home-content">
+        <h2>Hi, I'm <span>Diksha</span></h2>
+        <p class="tagline">Beginner Web Developer</p>
+        <div class="home-buttons">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn outline">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="content-card">
+        <h2>About Me</h2>
+        <p>
+            Hello!  I’m a BTech CSE student with a growing interest in web development.
+I’m currently learning HTML, CSS, and JavaScript, and I enjoy building clean websites while improving my skills every day
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="content-card">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="content-card">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card" onclick="openProject('pro.html')">
+                <h3>Recipe Heaven</h3>
+                <p>Recipe sharing platform</p>
+            </div>
+            <div class="project-card" onclick="openProject('quickcart.html')">
+                <h3>🛒 Quick Cart</h3>
+                <p>E-commerce website of stationery products with a clean UI.</p>
+        </div>
+    </div>
+</section>
+<section id="services">
+    <div class="content-card">
+        <h2 class="section-title">Services</h2>
+        <div class="services-container">
+            
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Responsive and clean websites using HTML, CSS & JS.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Python Projects</h3>
+                <p>Logic-based programs and mini applications.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <h3>DSA & Core CS</h3>
+                <p>Strong fundamentals in data structures & algorithms.</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="content-card">
+        <h2>Contact Me</h2>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message Sent!');">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send </button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p> Built with Passion</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
