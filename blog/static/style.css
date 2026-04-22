@@ -1,0 +1,99 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f5f7fb;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4a6cf7;
+    color: white;
+    padding: 15px 40px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn {
+    background: white;
+    color: #4a6cf7;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+/* Container */
+.container {
+    padding: 40px;
+}
+
+/* Title */
+.page-title {
+    margin-bottom: 20px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Buttons */
+.actions {
+    margin-top: 15px;
+}
+
+.edit {
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.delete {
+    color: red;
+}
+
+/* Form */
+.form {
+    max-width: 500px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form button {
+    background: #4a6cf7;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
