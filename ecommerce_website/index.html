@@ -1,0 +1,67 @@
+<!--
+Project: E-commerce Website
+Name: Diksha Kumari
+Date: 22 April 2026
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🛍 My E-Commerce Store</h1>
+</header>
+
+<!-- Product Section -->
+<section class="products">
+    <h2>Products</h2>
+    <div class="product-container">
+
+        <div class="card">
+            <h3>Smartphone</h3>
+            <p>Price: ₹15000</p>
+            <p>Latest Android phone</p>
+            <button onclick="addToCart('Smartphone', 15000)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Headphones</h3>
+            <p>Price: ₹2000</p>
+            <p>Noise cancelling</p>
+            <button onclick="addToCart('Headphones', 2000)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Laptop</h3>
+            <p>Price: ₹55000</p>
+            <p>High performance laptop</p>
+            <button onclick="addToCart('Laptop', 55000)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Cart Section -->
+<section class="cart">
+    <h2>🛒 Cart</h2>
+    <ul id="cart-items"></ul>
+    <h3>Total: ₹<span id="total">0</span></h3>
+</section>
+
+<!-- Checkout Section -->
+<section class="checkout">
+    <h2>Checkout</h2>
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="address" placeholder="Enter Address">
+    <button onclick="checkout()">Place Order</button>
+    <p id="message"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

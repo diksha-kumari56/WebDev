@@ -1,0 +1,125 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header p {
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Sections */
+section {
+    width: 85%;
+    margin: 40px auto;
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+    color: #4f46e5;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Product Grid */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.15);
+    transition: 0.3s ease;
+    border-top: 4px solid #7c3aed;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+}
+
+/* Price */
+.card p:nth-child(2) {
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+/* Buttons */
+button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Cart */
+.cart ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.cart li {
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Total */
+.cart h3 {
+    margin-top: 15px;
+    color: #7c3aed;
+}
+
+/* Checkout */
+.checkout input {
+    display: block;
+    margin: 12px 0;
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Success Message */
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #16a34a;
+}
