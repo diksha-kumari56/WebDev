@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>💰 Expense Tracker</h2>
+    <div class="nav-right">
+        <span id="username"></span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="app">
+
+    <div class="balance-box">
+        <h3>Remaining Balance</h3>
+        <h2 id="balance">₹0</h2>
+    </div>
+
+    <div class="summary">
+        <div class="income">
+            <h4>Total Balance</h4>
+            <p id="total-balance">₹0</p>
+        </div>
+        <div class="expense">
+            <h4>Money Spent</h4>
+            <p id="money-spent">₹0</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Set Balance</h3>
+        <input type="number" id="initial-balance">
+        <button onclick="setBalance()">Set</button>
+    </div>
+
+    <div class="section">
+        <h3>Add Transaction</h3>
+        <form id="transaction-form">
+            <input type="text" id="text" placeholder="Description" required>
+
+            <select id="category">
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Other</option>
+            </select>
+
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button>Add</button>
+        </form>
+    </div>
+
+    <div class="section">
+        <h3>Insights</h3>
+        <p id="top-category">No data</p>
+    </div>
+
+    <div class="section">
+    <h3>Spending Chart</h3>
+    <canvas id="chart"></canvas>
+    </div>
+    <div class="section">
+    <h3>Monthly Spending</h3>
+    <canvas id="monthlyChart"></canvas>
+    </div>
+
+    <div class="section">
+        <h3>History</h3>
+        <ul id="list"></ul>
+    </div>
+
+</div>
+
+<script>
+const user = localStorage.getItem("loggedInUser");
+if(!user){
+    window.location.href = "login.html";
+}
+document.getElementById("username").innerText = "Hi, " + user;
+function logout(){
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "/login";
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

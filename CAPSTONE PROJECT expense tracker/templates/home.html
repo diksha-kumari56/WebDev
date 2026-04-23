@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2 class="logo">💰 Expense Tracker</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Track Your Expenses Smartly 💸</h1>
+        <p>Control your money, understand your spending, and save better.</p>
+
+        <div class="buttons">
+            <a href="/login" class="primary-btn">Get Started</a>
+            <a href="/about" class="secondary-btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Why Use Expense Tracker?</h2>
+
+    <div class="feature-box">
+        <div class="card">
+            <h3>💰 Track Expenses</h3>
+            <p>Add and manage your daily transactions easily.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Insights</h3>
+            <p>See where your money goes the most.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔔 Alerts</h3>
+            <p>Get notified when your balance is low.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Expense Tracker</p>
+</footer>
+
+</body>
+</html>

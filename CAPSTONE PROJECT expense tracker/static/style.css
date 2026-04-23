@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #1e293b;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    font-size: 20px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logout-btn {
+    padding: 6px 14px;
+    background: #ef4444;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+/* ================= MAIN APP ================= */
+.app {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ================= BALANCE ================= */
+.balance-box {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.balance-box h3 {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.balance-box h2 {
+    font-size: 30px;
+}
+
+/* ================= SUMMARY ================= */
+.summary {
+    grid-column: span 2;
+    display: flex;
+    gap: 15px;
+}
+
+.summary div {
+    flex: 1;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.income {
+    border-left: 5px solid #10b981;
+}
+
+.expense {
+    border-left: 5px solid #ef4444;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+}
+
+/* ================= INPUTS ================= */
+input, select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #334155;
+    color: white;
+}
+
+/* ================= BUTTON ================= */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+/* ================= LIST ================= */
+ul {
+    list-style: none;
+}
+
+ul li {
+    background: #334155;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ================= AUTH PAGE ================= */
+.auth-body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.auth-container {
+    width: 350px;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.auth-container:hover {
+    transform: translateY(-5px);
+}
+
+.app-title {
+    color: #f472b6;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #e2e8f0;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #334155;
+    color: white;
+}
+
+.auth-container input:focus {
+    border: 1px solid #6366f1;
+    box-shadow: 0 0 8px rgba(99,102,241,0.5);
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.auth-container p {
+    margin-top: 15px;
+    color: #cbd5f5;
+}
+
+.auth-container a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
