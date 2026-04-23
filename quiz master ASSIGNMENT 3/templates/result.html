@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Your Score: {{ score }}/{{ total }}</h1>
+
+    {% if score == total %}
+        <p>🏆 Perfect Score!</p>
+    {% elif score >= 3 %}
+        <p>🔥 Great Job!</p>
+    {% elif score >= 1 %}
+        <p>👍 Good Try!</p>
+    {% else %}
+        <p>😅 Try Again!</p>
+    {% endif %}
+
+    <a href="/">
+        <button>Restart Quiz</button>
+    </a>
+</div>
+
+</body>
+</html>

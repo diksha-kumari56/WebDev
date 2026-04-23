@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    width: 60%;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+.question-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h3 {
+    color: #ffcc00;
+}

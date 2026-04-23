@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script>
+        let timeLeft = 30;
+
+        function startTimer() {
+            let timer = setInterval(function () {
+                document.getElementById("timer").innerHTML = timeLeft + " sec";
+                timeLeft--;
+
+                if (timeLeft < 0) {
+                    clearInterval(timer);
+                    alert("Time's up!");
+                    document.getElementById("quizForm").submit();
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+
+<body onload="startTimer()">
+
+<div class="container">
+    <h2>Answer the Questions</h2>
+
+    <h3>⏳ Time Left: <span id="timer">30 sec</span></h3>
+
+    <form id="quizForm" action="/result" method="post">
+
+        {% for q in questions %}
+            <div class="question-box">
+                <p><b>{{ loop.index }}. {{ q.question }}</b></p>
+
+                {% set outer_index = loop.index %}
+
+                {% for option in q.options %}
+                    <input type="radio"
+                           id="q{{ outer_index }}_{{ loop.index }}"
+                           name="q{{ outer_index }}"
+                           value="{{ option }}">
+
+                    <label for="q{{ outer_index }}_{{ loop.index }}">
+                        {{ option }}
+                    </label>
+                    <br>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
