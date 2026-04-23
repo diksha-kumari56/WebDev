@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="max-width: 400px; margin: 50px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 5px solid var(--primary);">
+    <h2 style="text-align: center;">Admin Login</h2>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required style="width:100%; padding:10px; margin:15px 0; border: 1px solid #ddd; border-radius: 5px;">
+        <input type="password" name="password" placeholder="Password" required style="width:100%; padding:10px; margin:15px 0; border: 1px solid #ddd; border-radius: 5px;">
+        <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+    </form>
+</div>
+{% endblock %}

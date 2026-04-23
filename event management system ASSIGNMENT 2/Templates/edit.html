@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(106,13,173,0.1); border-top: 5px solid var(--primary);">
+    <h2 style="color: var(--primary); margin-bottom: 20px;">Edit Event Details</h2>
+    
+    <form method="POST">
+        <label>Event Name</label><br>
+        <input type="text" name="name" value="{{ event.name }}" required 
+               style="width:100%; padding:10px; margin:10px 0; border: 1px solid #ddd; border-radius: 5px;">
+        
+        <label>Date</label><br>
+        <input type="date" name="date" value="{{ event.date }}" required 
+               style="width:100%; padding:10px; margin:10px 0; border: 1px solid #ddd; border-radius: 5px;">
+        
+        <label>Venue</label><br>
+        <input type="text" name="venue" value="{{ event.venue }}" required 
+               style="width:100%; padding:10px; margin:10px 0; border: 1px solid #ddd; border-radius: 5px;">
+        
+        <label>Description</label><br>
+        <textarea name="desc" style="width:100%; padding:10px; margin:10px 0; border: 1px solid #ddd; border-radius: 5px; height: 100px;">{{ event.desc }}</textarea>
+        
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" style="flex: 1;">Update Event</button>
+            <a href="{{ url_for('admin') }}" class="btn" style="flex: 1; background: #666; color: white; text-align: center; text-decoration: none;">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
