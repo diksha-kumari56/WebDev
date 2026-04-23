@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>My To-Do List</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>  My To-Do List</h1>
+
+<div class="task-input">
+
+<input type="text" id="title" placeholder="Enter a task...">
+
+<select id="priority">
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+
+<button class="add-btn" onclick="addTask()">Add Task</button>
+
+</div>
+
+<div class="filters">
+<button onclick="loadTasks()">All</button>
+<button onclick="filterTasks(false)">Active</button>
+<button onclick="filterTasks(true)">Completed</button>
+</div>
+
+<ul id="taskList"></ul>
+
+<p id="counter">Completed 0 / 0</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
