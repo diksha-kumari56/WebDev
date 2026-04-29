@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+
+<nav>
+    <h2>To-Do Manager</h2>
+    <div id="counter">0 / 0 / 0</div>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

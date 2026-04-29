@@ -1,0 +1,126 @@
+/* === SECTION 1: RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+}
+
+/* === SECTION 2: NAV === */
+nav {
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+/* === SECTION 3: CONTAINER === */
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* === SECTION 4: INPUT PANEL === */
+.input-panel input,
+.input-panel textarea,
+.input-panel select {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.input-panel button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff7a18, #ffb347);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-panel button:hover {
+    transform: scale(1.05);
+}
+
+/* === SECTION 5: FILTER === */
+.filters {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.filters button {
+    margin: 5px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    background: #eee;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* === SECTION 6: TASK CARD === */
+.task {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    position: relative;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Priority Borders */
+.task.high { border-left: 5px solid red; }
+.task.medium { border-left: 5px solid orange; }
+.task.low { border-left: 5px solid green; }
+
+/* Completed */
+.task.done {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+/* === SECTION 7: BUTTONS === */
+.task button {
+    margin: 5px 3px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.task button:nth-child(4) { background: #4CAF50; color: white; }
+.task button:nth-child(5) { background: #f44336; color: white; }
+.task button:nth-child(6) { background: #2196F3; color: white; }
+
+/* === SECTION 8: ANIMATIONS === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* === SECTION 9: RESPONSIVE === */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+}
